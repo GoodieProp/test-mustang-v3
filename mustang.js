@@ -28,7 +28,7 @@ function importContacts() {
     loadIndexAndContacts();
 }
 
-function saveContactsToServer() {
+function saveServer() {
     console.log("saveContactsToServer()");
     xmlhttp = new XMLHttpRequest();
     xmlhttp.onreadystatechange = function() {
@@ -42,7 +42,7 @@ function saveContactsToServer() {
     xmlhttp.send("contacts=" + JSON.stringify(contacts));   
 }
 
-function loadContactsFromServer() { //loading the contacts function
+function loadServer() { //loading the contacts function
     console.log("loadContactsFromServer()");
     contacts.length = 0;
     xmlhttp = new XMLHttpRequest();
